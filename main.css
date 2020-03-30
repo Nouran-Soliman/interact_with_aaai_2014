@@ -1,0 +1,276 @@
+.title{
+   width: 100%;
+   height: 100vh;
+   line-height:100vh;
+   background: #393939;
+   text-align: center;
+}
+
+.heading{
+    color:white;
+    font-family:Courier;
+    font-size:50px;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+body {
+  padding-top: 70px;
+}
+footer {
+  padding: 30px 0;
+}
+
+.toolTip {
+  position: absolute;
+  display: none;
+  min-width: 80px;
+  height: auto;
+  border: 1px solid #6F257F;
+  padding: 14px;
+  text-align: center;
+
+  line-height: 1;
+  font-weight: bold;
+ 
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+
+.rect:hover {
+  fill: brown;
+}
+
+.barsTitle {
+  margin: 0px 0px 15px 20px;
+  text-align: center;
+}
+
+/*----------------------------------------------*/
+
+svg {
+  font: 10px sans-serif;
+}
+
+.bar {
+  fill: orange;
+  clip-path: url(#clip);
+}
+.bar:hover {
+  fill: brown;
+}
+
+.subBar { 
+  fill: gray;
+  opacity: 0.5;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.brush .extent {
+  stroke: #fff;
+  fill: steelblue;
+  fill-opacity: .25;
+  shape-rendering: crispEdges;
+}
+
+/*----------------------------------------------*/
+
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+
+  .row-offcanvas-right {
+    right: 0;
+  }
+
+  .row-offcanvas-left {
+    left: 0;
+  }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -60%; /* 6 columns */
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -60%; /* 6 columns */
+  }
+
+  .row-offcanvas-right.active {
+    right: 60%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 60%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 60%; /* 6 columns */
+  }
+}
+
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  width:1100px;
+}
+
+.button {
+  background-color:orange; 
+  border: none;
+  color: white;
+  padding: 6px 16px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color:orange; 
+  color: white; 
+  border: 2px solid orange;
+}
+
+.button1:hover {
+  background-color: transparent;
+  color: black;
+}
+
+.quick-view-controller {
+	float: left;
+	width: 100%;
+	position: absolute;
+	height: 50px;
+	opacity: 0.8;
+	bottom: 0px;
+}
+
+.btn-view {
+  color: #222;
+}
+
+#quick-view-pop-up {
+	display: none;
+	background: #fff;
+	border: 1px solid #999;
+	z-index: 9998;
+	position: absolute;
+	top: 15%;
+	left: 10%; 
+	min-height: 600px;
+	width: 720px;
+}
+
+.quick-view-panel {
+  z-index: 9999;
+}
+
+.quick-view-loading {
+width: 100%;
+float: left;
+display: none;
+}
+
+.mask {
+	background-color: #000;
+	height: 10000px;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: none;
+	z-index: 9998;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter: alpha(opacity=50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+}
+
+.quick-view-close {
+	opacity: 1;
+	position: absolute;
+	right: 6px;
+	top: 6px;
+	width: 70px;
+	cursor: pointer;
+	z-index: 10;
+	display: block;
+	background-repeat: no-repeat;
+	height: 24px;
+	background-position-x: -78px;
+}
+
+.stats{
+  font-size: 15px;
+  margin-top: 1.67em;
+  margin-bottom: 1.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+  text-align: center;
+  color:orange;
+}
+

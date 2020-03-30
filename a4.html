@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+<body>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+	<script src= "main.js"> </script>
+	
+	<!-- <div class = "title">  <p class = "heading">Interactive AAAI 2014 Conference Proceedings</p> </div> -->
+
+	<nav class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container">
+		  <div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			  <span class="sr-only">Toggle navigation</span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			</button>
+			<h3 style="color:white">Interactive AAAI 2014 Conference Proceedings</h3>
+			
+		  </div>
+		  <a id="writeup" class="button button1" href="#" style="color:white; border:black;background:transparent; margin-top: 14px; margin-left:400px;font-size:large"> View Writeup </a> 
+		  <!-- <button id="writeup" href="#" class="button btn-view" style="color:white; background:transparent;margin-top: 14px; margin-left:400px;font-size:large"> Write-up </button> -->
+		</div><!-- /.container -->
+	  </nav><!-- /.navbar -->
+  
+	  <div class="container">
+  
+		<div class="row row-offcanvas row-offcanvas-right">
+  
+		  <div class="col-xs-12 col-sm-9" >
+			<p class="pull-right visible-xs">
+			  <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+			</p>
+			<div class="jumbotron" style="width:1100px">
+			  <p>Enter your search query</p>
+			  <label for="filterByTypehead">Filter by:</label>
+			  <div class="input-group mb-3" >
+				
+				<div class="input-group-prepend" style="float:left">
+					
+					<select id="filterByType" class="form-control">
+					  <option selected>None</option>
+					  <option>Topic</option>
+					  <option>Group</option>
+					  <option>Keyword</option>
+					  <option>Author</option>
+					  <option>Title</option>
+					</select>
+				</div>
+				<div style="float:right; width:850px">
+				<input id= "filterByText" type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Type (full/part of) search keyword">
+				</div>	
+			</div>
+
+			<div style="float:right">
+				<button id="Reset" class="button button1"> Reset </button>
+			</div>
+				<div style="float:right">
+				<button id="Filter" class="button button1"> Filter </button>
+				</div>
+
+
+			</div>
+
+			<div class="tab" style="width:1100px;">
+				<button id="btn_topics" class="tablinks" onclick="updateTab(event, 'Topics')" clicked>Topics</button>
+				<button id="btn_groups" class="tablinks" onclick="updateTab(event, 'Groups')">Groups</button>
+				<button id="btn_authors" class="tablinks" onclick="updateTab(event, 'Authors')">Authors</button>
+			</div>
+
+			  <div id="Topics" class="tabcontent">  </div>
+			  
+			  <div id="Groups" class="tabcontent">  </div>
+			  
+			  <div id="Authors" class="tabcontent">  </div>
+			
+			<div class="row" style="width:1130px;" id="papers">
+			  <!--/.col-xs-6.col-lg-4-->
+
+
+			</div><!--/row-->
+
+		  </div><!--/.col-xs-12.col-sm-9-->
+
+
+
+		</div><!--/row-->
+
+		<!--/quick view-->
+
+		<div class='mask'></div>
+		<div id='quick-view-pop-up'>
+			<div class='quick-view-panel'>
+				<div class='quick-view-close'></div>
+				<div class='quick-view-loading'>
+					Quick View Loading... 
+				</div>
+				<div id='quickviewContent'> kol 7agaaaaa fl popup </div>        
+			</div>
+		</div>
+
+		<div id= "test"> <svg id="topics_svg_test"> </svg> </div>
+		<hr>
+  
+		<footer>
+		  <p>  </p>
+		</footer>
+
+
+  
+	  </div><!--/.container-->
+
+
+
+</body>
+</html>
